@@ -8,17 +8,11 @@ $(document).ready(function(){
     this.src = v;
   });
 
-  $(".menu .marriage").bind("click", function(e){
+  $(".nav a").bind("click", function(e){
     e.preventDefault();
     e.stopPropagation();
-    video_tag.currentTime = 94;
+    seektime = $(this).data("seek");
+    video_tag.currentTime = seektime;
     video_tag.pause();
-  })
-
-  $(".menu .reception").bind("click", function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    video_tag.currentTime = 100;
-    video_tag.pause();
-  })
+  });
 });
