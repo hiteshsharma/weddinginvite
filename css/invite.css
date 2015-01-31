@@ -23,6 +23,7 @@ body{
 
 #header {
   background: rgba(46, 30, 1, 0.41);
+  box-shadow: 0px 2px 13px rgb(84, 83, 83);
   left: 0;
   position: fixed;
   top: 0;
@@ -37,7 +38,7 @@ body{
 .progress{
   position: fixed;
   height: 2px;
-  background-color: rgb(70,211,32);
+  background-color: rgb(51, 150, 24);
   width: 0%;
   opacity: 0.8;
 }
@@ -60,6 +61,7 @@ body{
 
 .nav {
   background: rgba(46, 30, 1, 0.41);
+  box-shadow: 11px -1px 13px rgb(84, 83, 83);
   bottom: 0;
   font-size: 30px;
   margin: 0;
@@ -82,6 +84,26 @@ body{
   font-size: 14px;
   margin: 0px 30px 0px 30px;
   text-decoration: none;
+}
+
+ul li.hd-switch{
+  float:right;
+}
+
+a.hd-switch{
+  padding: 5px;
+  border-radius: 6px;
+}
+
+a.hd {
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px white;
+  color: white;
+}
+
+a.non-hd {
+  border: 1px solid rgb(232, 232, 232);
+  color: rgb(232, 232, 232);
 }
 
 .content .names {

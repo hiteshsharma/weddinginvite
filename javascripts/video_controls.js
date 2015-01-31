@@ -8,7 +8,7 @@ $(document).ready(function(){
     this.src = v;
   });
 
-  $(".nav a").bind("click", function(e){
+  $(".nav a.event").bind("click", function(e){
     e.preventDefault();
     e.stopPropagation();
     seektime = $(this).data("seek");
@@ -35,12 +35,21 @@ $(document).ready(function(){
   $(video_tag).on("timeupdate", (function(){
     var progress = $(".progress");
     return function(e){
-      progress.animate({
-        width: this.currentTime*100/this.duration.toString() + "%",
-        duration: "fast"
-      });
+      progress.width((this.currentTime*100/this.duration).toString() + "%");
     };
   })());
+
+  $("a.hd-switch").on("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).toggleClass("hd").toggleClass("non-hd");
+    if($(this).hasClass("hd")){
+      video_tag.src = "video/animoto_720p.mp4";
+    } else{
+      video_tag.src = "video/animoto_high_res.mp4";
+    }
+    video_tag.play();
+  });
 
   $(video_tag).on("error", function(e){
     console.log("loadedata");
