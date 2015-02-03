@@ -7,23 +7,18 @@
     <link rel="stylesheet" href="css/invite.css"/>
     <script rel="text/javascript" src="javascripts/jquery-2.1.3.min.js"></script>
     <script rel="text/javascript" src="javascripts/video_controls.js"></script>
-    <FilesMatch "\.(webm|ogg|mp4)$">
-      Header set Expires "Mon, 27 Mar 2038 13:33:37 GMT"
-      Header set Cache-Control "max-age=864000"
-    </FilesMatch>
-    AddType video/mp4 .mp4
   </head>
   <body>
-  <div id="header">
-    <div class="wrapper">
-      <div class="progress buffered"></div>
-      <div class="progress playing"></div>
-    </div>
-  </div>
   <div id="video_container">
     <video class="bg_video" preload="auto" autoplay poster="images/video_background.png" src="video/animoto_high_res.mp4?1234213">
       <source src="http://vjs.zencdn.net/v/oceans1.mp4" type="video/mp4">
       <source src="http://vjs.zencdn.net/v/oceans1.webm" type="video/webm"></video>
   </div>
+  <ul class="actions">
+    <li class="play-status paused"></li>
+    <li class="hd-switch">
+      <a class="non-hd" href="#">HD</a>
+    </li>
+  </ul>
   </body>
 </html>

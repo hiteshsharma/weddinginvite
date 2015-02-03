@@ -51,7 +51,7 @@ $(document).ready(function(){
     };
   })());
 
-  $("a.hd-switch").on("click", function(e){
+  $("li.hd-switch a").on("click", function(e){
     e.preventDefault();
     e.stopPropagation();
     $(this).toggleClass("hd").toggleClass("non-hd");
@@ -69,7 +69,6 @@ $(document).ready(function(){
 
   $(video_tag).bind("progress", function(e){
     var bufferedTime = this.buffered.end(0);
-    console.log((bufferedTime*100/this.duration).toString() + '%');
     $(".progress.buffered").width((bufferedTime*100/this.duration).toString() + '%');
   })
   
