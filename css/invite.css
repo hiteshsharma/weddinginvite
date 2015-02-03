@@ -42,8 +42,15 @@ body{
 .progress{
   position: fixed;
   height: 2px;
-  background-color: rgb(51, 150, 24);
   width: 0%;
+}
+
+.progress.buffered{
+  background-color: rgb(166, 166, 166);
+}
+
+.progress.playing{
+  background-color: rgb(51, 150, 24);
 }
 
 .normal-height{
