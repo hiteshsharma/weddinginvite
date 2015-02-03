@@ -12,7 +12,7 @@ video{
 
 body{
   background-color: rgb(253, 255, 252);
-  font-family: 'royalfont', Georgia, serif;
+  font-family: 'Alegreya-sans', Georgia, serif;
   overflow: hidden;
 }
 
@@ -21,9 +21,13 @@ body{
   src: url('../fonts/alsscrp.ttf')
 }
 
+@font-face {
+  font-family: Alegreya-sans;
+  src: url('../fonts/alegreya-sans.thin.ttf');
+}
+
 #header {
   background: rgba(46, 30, 1, 0.41);
-  box-shadow: 0px 2px 13px rgb(84, 83, 83);
   left: 0;
   position: fixed;
   top: 0;
@@ -40,7 +44,6 @@ body{
   height: 2px;
   background-color: rgb(51, 150, 24);
   width: 0%;
-  opacity: 0.8;
 }
 
 .normal-height{
@@ -55,17 +58,17 @@ body{
   font-size: 2.7em;
   letter-spacing: 4px;
   top: 15px;
-  text-shadow: 0 7px 0 rgba(0, 0, 0, 0.31);
   width: 100%;
+  margin: 12px 0 12px 0;
+  opacity: 0.7;
 }
 
 .nav {
   background: rgba(46, 30, 1, 0.41);
-  box-shadow: 11px -1px 13px rgb(84, 83, 83);
   bottom: 0;
   font-size: 30px;
   margin: 0;
-  padding: 0.5em 0;
+  padding: 0.4em 0;
   position: fixed;
   text-align: center;
   text-transform: uppercase;
@@ -80,7 +83,6 @@ body{
 
 .nav a {
   color: white;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   margin: 0px 30px 0px 30px;
   text-decoration: none;
@@ -104,6 +106,26 @@ a.hd {
 a.non-hd {
   border: 1px solid rgb(232, 232, 232);
   color: rgb(232, 232, 232);
+}
+
+li.play-status.playing {
+  background-image: url('../images/media_pause_inv.png');
+  background-size: 83%;
+  background-position: 3px;
+}
+
+li.play-status {
+  width: 30px;
+  height: 30px;
+  border: 2px solid lightgray;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+}
+
+li.play-status.paused {
+  background-image: url('../images/media_play_inv.png');
+  background-size: 84%;
+  background-position: 4px;
 }
 
 .content .names {

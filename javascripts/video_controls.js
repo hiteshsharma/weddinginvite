@@ -26,10 +26,12 @@ $(document).ready(function(){
 
   $(video_tag).on("pause", function(){
     console.log("paused");
+    $("li.play-status.playing").toggleClass("playing").toggleClass("paused");
   });
 
   $(video_tag).on("playing", function(){
     console.log("playing");
+    $("li.play-status.paused").toggleClass("paused").toggleClass("playing");
   });
 
   $(video_tag).on("timeupdate", (function(){
