@@ -56,9 +56,9 @@ $(document).ready(function(){
     e.stopPropagation();
     $(this).toggleClass("hd").toggleClass("non-hd");
     if($(this).hasClass("hd")){
-      video_tag.src = "video/animoto_720p.mp4";
+      video_tag.src = "http://vcdn.slidesharecdn.com/animotohighres-150204082113-conversion-gate02-video-HD.mp4";
     } else{
-      video_tag.src = "video/animoto_high_res.mp4";
+      video_tag.src = "http://vcdn.slidesharecdn.com/animotohighres-150204082113-conversion-gate02-video-SD.mp4";
     }
     video_tag.play();
   });
