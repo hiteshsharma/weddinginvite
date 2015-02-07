@@ -56,9 +56,9 @@ $(document).ready(function(){
     e.stopPropagation();
     $(this).toggleClass("hd").toggleClass("non-hd");
     if($(this).hasClass("hd")){
-      video_tag.src = "http://vcdn.slidesharecdn.com/animotohighres-150204082113-conversion-gate02-video-HD.mp4";
+      video_tag.src = "http://vcdn.slidesharecdn.com/animoto360p2-150207200234-conversion-gate02-video-HD.mp4";
     } else{
-      video_tag.src = "http://vcdn.slidesharecdn.com/animotohighres-150204082113-conversion-gate02-video-SD.mp4";
+      video_tag.src = "http://vcdn.slidesharecdn.com/animoto360p2-150207200234-conversion-gate02-video-SD.mp4";
     }
     video_tag.play();
   });
@@ -79,6 +79,4 @@ $(document).ready(function(){
   $(video_tag).on("loadedmetadata", function(e){
     console.log("loadedmetadata");
   });
-
-  
 });
