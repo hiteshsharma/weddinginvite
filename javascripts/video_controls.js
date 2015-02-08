@@ -48,6 +48,12 @@ $(document).ready(function(){
     var progress = $(".progress.playing");
     return function(e){
       progress.width((this.currentTime*100/this.duration).toString() + "%");
+
+      if(this.currentTime < 116){
+        this.volume = 0.15;
+      } else {
+        this.volume = 1;
+      }
     };
   })());
 
