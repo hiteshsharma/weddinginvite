@@ -1,7 +1,5 @@
 $(document).ready(function(){
   video_tag = $(".bg_video").get(0);
-
-  video_tag.play();
   
   $(".bg_video").bind("ended", function(){
     v = this.src;
@@ -42,8 +40,14 @@ $(document).ready(function(){
     }
   });
 
+  $(video_tag).on("play", function(){
+    console.log('play');
+    $("div.mobile-play").hide();
+  })
+
   $(video_tag).on("playing", function(){
     console.log("playing");
+    $("div.mobile-play").hide();
     $("li.play-status.paused").toggleClass("paused").toggleClass("playing");
   });
 
@@ -88,4 +92,9 @@ $(document).ready(function(){
   $(video_tag).on("loadedmetadata", function(e){
     console.log("loadedmetadata");
   });
+
+  $("div.mobile-play").click(function(e){
+    video_tag.play();
+    $(this).hide();
+  })
 });
