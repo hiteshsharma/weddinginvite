@@ -1,5 +1,8 @@
 $(document).ready(function(){
   video_tag = $(".bg_video").get(0);
+
+  video_tag.play();
+  
   $(".bg_video").bind("ended", function(){
     v = this.src;
     this.src = '';
