@@ -23,11 +23,13 @@ $(document).ready(function(){
 
   $(video_tag).on("ended", function(){
     console.log("ended");
+    $("div.mobile-play").show();
   });
 
   $(video_tag).on("pause", function(){
     console.log("paused");
     $("li.play-status.playing").toggleClass("playing").toggleClass("paused");
+    $("div.mobile-play").show();
   });
 
   $("li.play-status").on('click', function(e){

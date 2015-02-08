@@ -193,28 +193,9 @@ div.mobile-play {
   background-image: url('../images/circle_outline_play.png');
   position: absolute;
   left: 43%;
-  top: 48%;
+  top: 40%;
   width: 128px;
   height: 128px;
-  opacity: 0.5;
-  display: none;
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-  div.mobile-play{
-    display:block;
-  }
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
-  div.mobile-play{
-    display:block;
-  }
+  opacity: 0.7;
+  cursor: pointer;
 }
