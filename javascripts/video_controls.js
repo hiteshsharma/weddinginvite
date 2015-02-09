@@ -58,7 +58,7 @@ $(document).ready(function(){
     return function(e){
       progress.width((this.currentTime*100/this.duration).toString() + "%");
 
-      if(this.currentTime < 116){
+      if(this.currentTime < 117){
         this.volume = 0.15;
       } else {
         this.volume = 1;
